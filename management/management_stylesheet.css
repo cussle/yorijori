@@ -1,0 +1,221 @@
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--maincolor);
+    text-align: center;
+    margin: 2rem;
+    user-select: none;
+}
+
+
+
+/* attraction & accommodation */
+#attraction-form,
+#accommodation-form {
+    display: flex;
+    justify-content: center;
+}
+
+#attraction-form > div,
+#accommodation-form > div {
+    margin-right: 1rem
+}
+
+#attraction-form > div:nth-child(1),
+#accommodation-form > div:nth-child(1),
+#attraction-form > div:nth-child(2) button,
+#accommodation-form > div:nth-child(2) button {
+    padding: 1rem;
+    border: 1px solid #ddd;
+}
+
+#attraction-form > button,
+#accommodation-form > button {
+    padding: 0rem 2rem;
+}
+
+#attraction-form > div:nth-child(1) .custom-radio {
+    margin: 0 1rem;
+}
+
+#accommodation-form > div:nth-child(1) .custom-radio {
+    margin: 0 3.9rem;
+}
+
+#attraction-form > div:nth-child(2) button,
+#accommodation-form > div:nth-child(2) button {
+    width: 25rem;
+    letter-spacing: 0.2rem;
+    transition: all .35s;
+}
+
+#attraction-form > div:nth-child(2) button:hover,
+#accommodation-form > div:nth-child(2) button:hover {
+    background-color: rgba(246, 87, 87, 0.2);
+}
+
+#attraction-form > div:nth-child(2) button:active,
+#accommodation-form > div:nth-child(2) button:active {
+    background-color: rgba(246, 87, 87, 0.4);
+}
+
+
+
+/* attraction - modal */
+.modal > .modal-content > .modal-title {
+    text-align: center;
+    padding: 1rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.modal > .modal-content .location-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.location-wrapper .location-select {
+    width: 45%;
+    height: 90%;
+    border: 1px solid #ddd;
+}
+
+.location-wrapper .location-select .modal-sub-title {
+    text-align: center;
+    padding: 1rem;
+    font-weight: 500;
+    font-size: 1.3rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.radio-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    padding: 1rem;
+}
+
+.radio-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(50% - 5px);
+    padding: 0.6rem;
+    border: 2px solid var(--mainColor);
+    border-radius: 0.5rem;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.radio-button input[type="radio"] {
+    display: none;
+}
+
+.radio-button span {
+    pointer-events: none;
+}
+
+.radio-button-checked {
+    background-color: var(--mainColor);
+    color: white;
+    font-weight: 500;
+    transition: all .35s;
+}
+
+
+
+/* attraction - result */
+#attraction-result {
+    border: 1px solid #ddd;
+    margin: 2rem 10rem;
+    min-height: 38rem;
+    height: 60%;
+    overflow: auto;
+}
+
+.result-wrapper {
+    width: 100%;
+    height: 30%;
+    background: white;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+
+.result-info-wrapper {
+    line-height: 3rem;
+}
+
+.result-info-wrapper ~ button {
+    padding: 1rem 2rem;
+}
+
+
+
+/* accommodation - result */
+#accommodation-result {
+    border: 1px solid #ddd;
+    margin: 2rem 10rem;
+    min-height: 38rem;
+    height: 60%;
+    overflow: auto;
+}
+
+.result-wrapper {
+    width: 100%;
+    height: 30%;
+    background: white;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+
+.result-info-wrapper {
+    line-height: 3rem;
+}
+
+.result-info-wrapper ~ button {
+    padding: 1rem 2rem;
+}
+
+
+
+/* travel - result */
+#travel-result {
+    border: 1px solid #ddd;
+    margin: 2rem 10rem;
+    min-height: 38rem;
+    height: 75%;
+    overflow: auto;
+}
+
+#travel-result .result-wrapper {
+    width: 100%;
+    height: 30%;
+    background: white;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+
+#travel-result .result-info-wrapper {
+    line-height: 3rem;
+}
+
+#travel-result .result-info-wrapper ~ button {
+    padding: 1rem 2rem;
+}

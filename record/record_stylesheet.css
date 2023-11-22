@@ -1,0 +1,391 @@
+body {
+    height: 100vh;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--maincolor);
+    text-align: center;
+    margin: 2rem;
+    user-select: none;
+}
+
+
+
+/* board */
+/* board - preview */
+#article-preview {
+    border: 1px solid #ddd;
+    margin: 2rem 10rem 1.5rem 10rem;
+    min-height: 38rem;
+    height: 70%;
+    overflow: auto;
+}
+
+#article-preview .article-wrapper {
+    width: 100%;
+    height: 30%;
+    background: white;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+#article-preview .article-info-wrapper {
+    line-height: 3rem;
+    width: 70%;
+    margin: 0 3rem;
+}
+
+#article-preview .article-sub-info-wrapper {
+    line-height: 2rem;
+    width: 20%;
+}
+
+.article-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.article-sub-text {
+    color: darkgray;
+}
+
+.article-details {
+    line-height: 2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+#preview-button-wrapper {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-right: 10rem;
+}
+
+/* board - write */
+#article-write {
+    margin: 2rem 10rem 1.5rem 10rem;
+    min-height: 38rem;
+    height: 70%;
+    overflow: auto;
+}
+
+#write-button-wrapper {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-right: 10rem;
+    gap: 1.5rem;
+}
+
+#article-write-title {
+    width: 100%;
+    height: 8%;
+    padding: 0 1.2rem;
+    display: flex;
+    margin-top: 1rem;
+}
+
+#article-write-contents {
+    width: 100%;
+    height: 85%;
+    padding: 1rem;
+}
+
+#alticle-titlei-input {
+    width: 100%;
+    padding-left: 1rem;
+    font-size: 1.5rem;
+    border: 1px solid #ddd;
+}
+
+#article-write h1 {
+    font-size: 2.5em;
+    font-weight: normal;
+    color: inherit;
+    text-align: left;
+    margin: 0;
+    user-select: auto;
+}
+
+#article-write h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+#article-write h3 {
+    font-size: 1.75em;
+    font-style: italic;
+}
+
+#article-write h4 {
+    font-size: 1.5em;
+    text-decoration: underline;
+}
+
+#article-write h5 {
+    font-size: 1.25em;
+    text-transform: uppercase;
+}
+
+#article-write h6 {
+    font-size: 1em;
+    letter-spacing: 0.1em;
+}
+
+#article-write ul, ol {
+    padding-left: 20px;
+    margin: 0;
+    list-style-position: inside;
+}
+
+#article-write ul {
+    list-style-type: square;
+}
+
+#article-write ol {
+    list-style-type: decimal;
+}
+
+#article-write li {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 5px;
+}
+
+/* board - write - modal */
+.modal > .modal-content > .modal-title {
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.modal-content > .course-main-wrapper {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--bs-modal-border-radius);
+    overflow: auto;
+}
+
+.course-main-wrapper .course-wrapper {
+    width: 100%;
+    height: 40%;
+    background: white;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+
+.course-info-wrapper {
+    width: 65%;
+    line-height: 3rem;
+}
+
+.course-info-wrapper .course-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.course-info-wrapper .course-sub-text {
+    color: darkgray;
+}
+
+.course-info-wrapper .course-details {
+    line-height: 1.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+#writer-info-input-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 5rem 11rem 3rem 0;
+}
+
+#writer-info-input-wrapper div {
+    margin-bottom: 10px;
+}
+
+#writer-info-input-wrapper label, input {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px 0;
+}
+
+#writer-info-input-wrapper label {
+    width: 15rem;
+    text-align: right;
+    margin-right: 10px;
+}
+
+#writer-info-input-wrapper input[type="text"], input[type="password"] {
+    width: 20rem;
+}
+
+#write-modal-button-wrapper {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* board - detail */
+#article-detail {
+    border: 1px solid #ddd;
+    margin: 2rem 10rem 1.5rem 10rem;
+    min-height: 38rem;
+    height: 70%;
+}
+
+#article-detail-title {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+#article-detail-title p {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+#article-detail-contents {
+    width: 100%;
+    height: 90%;
+    overflow: auto;
+    padding: 1rem;
+    border-top: none;
+}
+
+#article-button-wrapper {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-right: 10rem;
+    gap: 1.5rem;
+}
+
+#remover-info-input-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 5rem 11rem 3rem 0;
+}
+
+#remover-info-input-wrapper div {
+    margin-bottom: 10px;
+}
+
+#remover-info-input-wrapper label, input {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px 0;
+}
+
+#remover-info-input-wrapper label {
+    width: 15rem;
+    text-align: right;
+    margin-right: 10px;
+}
+
+#remover-info-input-wrapper input[type="text"], input[type="password"] {
+    width: 20rem;
+}
+
+#remove-modal-button-wrapper {
+    margin: 0 auto;
+}
+
+
+
+/* Writing */
+#login-form {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#login-form input {
+    width: 20rem;
+    padding: 0.5rem;
+}
+
+#my-article-preview {
+    border: 1px solid #ddd;
+    margin: 2rem 10rem 1.5rem 10rem;
+    min-height: 38rem;
+    height: 65%;
+    overflow: auto;
+}
+
+#my-article-preview .my-article-wrapper {
+    width: 100%;
+    height: 30%;
+    background: white;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+#my-article-preview .my-article-info-wrapper {
+    line-height: 3rem;
+    width: 60%;
+    margin: 0 3rem;
+}
+
+#my-article-preview .my-article-sub-info-wrapper {
+    line-height: 2rem;
+    width: 20%;
+}
+
+.my-article-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.my-article-sub-text {
+    color: darkgray;
+}
+
+.my-article-details {
+    line-height: 2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.my-article-wrapper button {
+    padding: 1rem 2rem;
+}

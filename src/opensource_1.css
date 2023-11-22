@@ -1,0 +1,102 @@
+/*
+* Oepn Source #1. Button Hover
+* Copyright (c) 2023 by Katherine Kato (https://codepen.io/kathykato/pen/rZRaNe)
+* Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+* Applied Line: (stylesheet.css) 66 ~ 159, (index.html)
+*/
+.func-sub-btn-wrapper {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0 0 1rem 0;
+}
+  
+.func-sub-btn {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+}
+.func-sub-btn.func-sub-btn {
+    width: 12rem;
+    height: auto;
+}
+.func-sub-btn.func-sub-btn .func-sub-btn-circle {
+    transition: all 0.45s cubic-bezier(0.65,0,.076,1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: rgba(246, 87, 87, 1);
+    border-radius: 1.625rem;
+}
+.func-sub-btn.func-sub-btn .func-sub-btn-circle .func-sub-btn-icon {
+    transition: all 0.45s cubic-bezier(0.65,0,.076,1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+}
+.func-sub-btn.func-sub-btn .func-sub-btn-circle .func-sub-btn-icon.func-sub-btn-arrow {
+    transition: all 0.45s cubic-bezier(0.65,0,.076,1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+}
+.func-sub-btn.func-sub-btn .func-sub-btn-circle .func-sub-btn-icon.func-sub-btn-arrow::before {
+    position: absolute;
+    content: '';
+    top: -0.25rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+}
+.func-sub-btn.func-sub-btn .func-sub-btn-text {
+    transition: all 0.45s cubic-bezier(0.65,0,.076,1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: rgba(246, 87, 87, 1);
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+}
+.func-sub-btn:hover .func-sub-btn-circle {
+    width: 100%;
+}
+.func-sub-btn:hover .func-sub-btn-circle .func-sub-btn-icon.func-sub-btn-arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+}
+.func-sub-btn:hover .func-sub-btn-text {
+    color: #fff;
+}
+
+/* CSS Grid Support */
+@supports (display: grid) {
+    .func-sub-btn-wrapper {
+        grid-area: main;
+        align-self: center;
+        justify-self: center;
+    }
+}

@@ -1,0 +1,45 @@
+a {
+    text-decoration: none;
+}
+
+.container-fluid {
+    margin: 0 auto;
+    height: 100%;
+    user-select: none;
+}
+
+.container-fluid .heading-wrapper > h1 > a > img {
+    max-width: 30rem;
+    margin-bottom: 4rem;
+}
+
+.container-fluid .func-wrapper {
+    margin-bottom: 10rem;
+}
+
+.container-fluid .func-wrapper .func-div {
+    margin: 0 5rem;
+}
+
+.container-fluid .func-wrapper .func-div h2[id *= "btn"] {
+    cursor: pointer;
+    text-align: center;
+    font-family: 'JalnanGothic', 'Nanum Gothic', sans-serif;
+    color: rgba(246, 87, 87, 1);
+    padding: 1rem 2rem 0.5rem 2rem;
+    font-size: 1.7rem;
+    letter-spacing: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.container-fluid .func-wrapper .func-div .func-sub-wrapper {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    transition: all 0.5s;
+}
+
+.container-fluid .func-wrapper .func-div:hover .func-sub-wrapper {
+    opacity: 1;
+    visibility: visible;
+}

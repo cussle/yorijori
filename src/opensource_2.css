@@ -1,0 +1,58 @@
+/*
+* Oepn Source #2. Rotating Text
+* Copyright (c) 2023 by Rachel Smith (https://codepen.io/rachsmith/pen/BNKJme)
+* Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+* Applied Line: (stylesheet.css) 169 ~ 218, (index.html), (script.js) 3 ~ 55
+*/
+.slogan-color-wisteria { color: #8e44ad; }
+.slogan-color-belize { color: #2980b9; }
+.slogan-color-green { color: #16a085; }
+
+#slogan-wrapper {
+    width: 35rem;
+    height: 3rem;
+    font-weight: 600;
+    font-size: 2rem;
+    margin: 3rem auto;
+    padding-left: 3.7rem;
+    color: gray;
+}
+  
+#slogan-wrapper > p:nth-child(3) {
+    margin-left: 4rem;
+}
+  
+.slogan-text {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+}
+
+.slogan-word {
+    position: absolute;
+    width: 220px;
+    opacity: 0;
+}
+
+.slogan-letter {
+    display: inline-block;
+    position: relative;
+    transform: translateZ(25px);
+    transform-origin: 50% 50% 25px;
+}
+
+.slogan-letter.slogan-letter-animation-out {
+    transform: rotateX(90deg);
+    transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.slogan-letter.slogan-letter-animation-behind {
+    transform: rotateX(-90deg);
+}
+
+.slogan-letter.slogan-letter-animation-in {
+    transform: rotateX(0deg);
+    transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}

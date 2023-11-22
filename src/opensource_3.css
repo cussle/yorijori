@@ -1,0 +1,122 @@
+/*
+* Oepn Source #3. Drop-down nav
+* Copyright (c) 2023 by Scott Marshall (https://codepen.io/ScottMarshall/pen/KdQJXX)
+* Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+* Applied Line: 
+*/
+body {
+  overflow-x: hidden;
+  margin: 0;
+}
+
+#nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 0px 5px #d6d6d6;
+  padding: 10px;
+  user-select: none;
+}
+
+#nav-logo {
+  margin: 0;
+  padding: 0.5rem 3rem;
+}
+
+#nav-wrapper ul {
+  width: 620px;
+  margin: 0;
+}
+
+#nav-wrapper ul li {
+  float: left;
+  list-style: none;
+  margin: 0 20px;
+  position: relative;
+}
+
+#nav-wrapper ul li a {
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  position: relative;
+  color: #333333;
+  text-decoration: none;
+  letter-spacing: 1px;
+  padding: 15px 15px 15px 25px;
+  display: block;
+  width: 150px;
+  z-index: 1000;
+}
+
+#nav-wrapper ul li a i {
+  font-size: 12px !important;
+  position: absolute;
+  right: 10px;
+  top: 14px;
+}
+
+#nav-wrapper ul li .drop-down {
+  position: absolute;
+  padding: 0;
+  display: none;
+  margin: 0 -20px;
+  left: 0;
+  z-index: 0;
+}
+
+#nav-wrapper ul li .drop-down li {
+  position: relative;
+  float: none;
+}
+
+#nav-wrapper ul li .drop-down li a {
+  border-top: none;
+  width: 150px;
+  transition: all .35s;
+  background-color: rgba(255, 252, 245, 1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+}
+
+#nav-wrapper ul li .drop-down li a:hover {
+  background: rgba(246, 87, 87, 1);
+  color: rgba(255, 252, 245, 1);
+}
+
+#nav-wrapper ul li .drop-down li:nth-of-type(1) a {
+  border-top: none;
+}
+
+.nav-accent {
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: rgba(246, 87, 87, 1);
+  position: absolute;
+  transition: 0.3s ease;
+}
+
+.nav-animate {
+  width: 100%;
+  transition: 0.3s ease;
+}
+
+#nav-wrapper > ul > li > a {
+    font-size: 18px;
+}
+
+.nav-item:hover {
+  color: rgba(255, 252, 245, 1);
+}
+
+.material-symbols-outlined {
+  vertical-align: middle;
+}
+
+#nav-logo > a > img {
+    max-height: 2.5rem;
+}
